@@ -1,0 +1,39 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "soi-144-notched",
+      "properties": {
+        "label": "Soi Ramkhamhaeng 144",
+        "kind": "illustrative study parcel; not a title or survey",
+        "front_edge": [0, 1],
+        "road_osm_id": 157453167,
+        "assumed_public_row_m": 6,
+        "zone_scenario": "ย.3-36",
+        "default_program": "multifamily"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[100.693118,13.7848795],[100.6932223,13.7847088],[100.6930952,13.7846347],[100.6930715,13.7846735],[100.6930239,13.7846457],[100.6929433,13.7847776],[100.693118,13.7848795]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "soi-142-1",
+      "properties": {
+        "label": "Soi Ramkhamhaeng 142/1",
+        "kind": "illustrative study parcel; not a title or survey",
+        "front_edge": [0, 1],
+        "road_osm_id": 157453542,
+        "assumed_public_row_m": 8,
+        "zone_scenario": "ย.3-36",
+        "default_program": "office"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[100.6918039,13.7840309],[100.6919028,13.7838782],[100.6920356,13.7839604],[100.6920294,13.7840207],[100.6919367,13.7841131],[100.6918039,13.7840309]]]
+      }
+    }
+  ]
+}

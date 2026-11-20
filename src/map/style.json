@@ -1,0 +1,16 @@
+{
+  "version": 8,
+  "sources": {
+    "roads": { "type": "geojson", "data": { "type": "FeatureCollection", "features": [] } },
+    "neighbors": { "type": "geojson", "data": { "type": "FeatureCollection", "features": [] } },
+    "study": { "type": "geojson", "maxzoom": 18, "tolerance": 0, "data": { "type": "FeatureCollection", "features": [] } }
+  },
+  "light": { "anchor": "viewport", "color": "#fff9eb", "intensity": 0.40, "position": [1.15, 220, 36] },
+  "layers": [
+    { "id": "ground", "type": "background", "paint": { "background-color": "#e9e7df" } },
+    { "id": "road-casing", "type": "line", "source": "roads", "layout": { "line-cap": "round", "line-join": "round" }, "paint": { "line-color": "#d9d6ca", "line-width": ["interpolate",["exponential",2],["zoom"], 14, 1.5,17,["match",["get","highway"],["primary","trunk","motorway"],18,["service","footway","path"],2.6,5.8],21,["match",["get","highway"],["primary","trunk","motorway"],240,["service","footway","path"],28,94]] } },
+    { "id": "road-surface", "type": "line", "source": "roads", "layout": { "line-cap": "round", "line-join": "round" }, "paint": { "line-color": "#f6f3eb", "line-width": ["interpolate",["exponential",2],["zoom"],14,0.9,17,["match",["get","highway"],["primary","trunk","motorway"],16,["service","footway","path"],1.35,4.4],21,["match",["get","highway"],["primary","trunk","motorway"],236,["service","footway","path"],25,89]] } },
+    { "id": "neighbor-outline", "type": "line", "source": "neighbors", "paint": { "line-color": "#a8aaa3", "line-width": 0.8, "line-opacity": 0.7 } },
+    { "id": "neighbor-mass", "type": "fill-extrusion", "source": "neighbors", "paint": { "fill-extrusion-color": "#c6c9c7", "fill-extrusion-height": 6, "fill-extrusion-vertical-gradient": true } }
+  ]
+}

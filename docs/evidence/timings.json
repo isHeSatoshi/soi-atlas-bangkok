@@ -1,0 +1,15 @@
+{
+  "firstMs": 450.79999999701977,
+  "map": {
+    "samples": 24,
+    "p95Ms": 47.20000000298023,
+    "worstMs": 50.29999999701977
+  },
+  "ui": {
+    "samples": 24,
+    "p95Ms": 25.5,
+    "worstMs": 31.299999997019768
+  },
+  "instances": 1,
+  "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"
+}

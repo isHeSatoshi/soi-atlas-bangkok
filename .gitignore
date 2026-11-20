@@ -1,0 +1,11 @@
+node_modules/
+dist/
+playwright-report/
+test-results/
+.env*
+*.local
+.wrangler/
+/Generalist-Assignment.pdf
+/BUILD_PLAN.md
+/docs/SUBMISSION_DOC.md
+/planning/SUBMISSION.md

@@ -1,6 +1,6 @@
 # Delivery notes & verification evidence
 
-The [README](../README.md) explains the problem, geometry pipeline, and headline results. This page collects the visual captures, drag-latency benchmarks, and engineering trade-offs from the production build.
+The [README](../README.md) explains the problem, geometry pipeline, and headline results for the live deployment at [https://soi-atlas-bangkok.pages.dev/](https://soi-atlas-bangkok.pages.dev/). This page collects the visual captures, drag-latency benchmarks, and engineering trade-offs from the production build.
 
 ## Captured screens
 

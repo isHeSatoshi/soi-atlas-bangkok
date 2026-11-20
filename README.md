@@ -4,7 +4,7 @@
 
 _Deterministic low-rise parcel massing under Bangkok's ย.3-36 building rules._
 
-[Run locally](#run-it) · [Rulebook](planning/RULEBOOK.md) · [Worked fixtures](planning/ACCEPTANCE.md) · [Benchmarks & notes](docs/DELIVERY.md)
+[**Live app (soi-atlas-bangkok.pages.dev) ->**](https://soi-atlas-bangkok.pages.dev/) · [Run locally](#run-it) · [Rulebook](planning/RULEBOOK.md) · [Worked fixtures](planning/ACCEPTANCE.md) · [Benchmarks & notes](docs/DELIVERY.md)
 
 ![Soi Atlas workspace on Soi Ramkhamhaeng 144](docs/evidence/studio-desktop.png)
 
@@ -61,6 +61,19 @@ On the default **453.91 m² notched plot** on Soi Ramkhamhaeng 144 (`6 m` ROW, C
 | **D · Sky Lantern** | **547.8 m²** | 6 floors · 18 m | 356.1 m² | 178.1 m² | Slim plate + roof step |
 
 Look at **Garden Bar** versus **Stepped Court**. The classic NIMBY demand at any planning hearing is *"chop a floor off and add a step-back so it feels less bulky."* When you actually run the geometry, forcing the building down from 6 floors to 5 with a terrace makes the lower plates spread wider across the lot, **wiping out 118.3 m² of housing AND 39.3 m² of green yard at the same time**. Everyone gets fewer homes and less grass, which is peak neighborhood preservation.
+
+## Studio & due-diligence checks in the app
+
+- **Interactive 3D massing & editing:** Draw or drag any simple polygon (including concave notches), switch public frontage edges, compare **Soi Ramkhamhaeng 144** (`6 m` ROW) against **Soi 142/1** (`8 m` ROW), toggle **Floor cutaway** (`F1`–`F7`), scrub the **2:1 road sky-plane section probe**, cast **Equinox sun shadows** (`09:00 / 12:00 / 16:00`), and export a **standalone SVG architectural sheet** (`1:250` plan + `1:200` section).
+- **8 due-diligence screens (`src/domain/diligence.ts`):**
+  - **Parking (`BMA §§83–90`):** Packs `2.4 × 5.0 m` perpendicular stalls along a `6.0 m` two-way aisle inside leftover yard (`1 stall / 60 m²` office; `1 / 120 m²` condo units `>= 60 m²`) and flags when surface stalls cannot fit without stealing the `50%` planted yard.
+  - **Fire access (`MR 55`):** Checks public ROW width (`< 6 m` narrow, `6–10 m` standard, `>= 10 m` wide) and straight-line approach from street to façade.
+  - **Egress (`MR 55 §§27–29`):** Flags where a single `>= 0.90 m` stair suffices vs when floor area (`> 300 m²` above F1) or height (`>= 15 m`) requires a second enclosed escape stair.
+  - **Structure (`MR B.E. 2566`):** Checks plate span (`<= 14 m` RC frame) and estimates structural column bays on a `6 × 6 m` grid.
+  - **Environmental impact assessment (`ONEP`):** Tracks Bangkok condo EIA thresholds (`>= 80 units` or `>= 4,000 m²`).
+  - **Permits (`Building Control Act §39 bis`):** Lists the Saphan Sung District Office filing sequence, licensed architect/engineer sign-offs, and title/ROW survey checks.
+  - **Utilities, easements & overlays:** Interactive rear no-build strip (`0 / 2 / 3 m`) that re-runs the solver live and measures exact GFA loss before an easement survey comes back.
+  - **Site model assumptions:** Flags unverified cadastral boundaries, flat-datum assumptions, and corner plots touching a second road.
 
 ## Run it
 

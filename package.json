@@ -1,6 +1,7 @@
 {
   "name": "bangkok-plot-study",
   "version": "1.0.0",
+  "homepage": "https://soi-atlas-bangkok.pages.dev/",
   "private": true,
   "type": "module",
   "scripts": {
